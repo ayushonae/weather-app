@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather</h1>
+
+      <div class="search-box">
+        <!-- <button type="button" id="theme-toggle">🌙 Dark Mode</button> -->
+        <input type="text" id="city" placeholder="Enter city name" />
+        <button type="button">🔍 Search</button>
+      </div>
+
+      <div class="weather-info">
+        <div class="main-weather">
+          <div id="weather-icon">☁️</div>
+
+          <h2 id="temperature"></h2>
+          <p id="condition"></p>
+        </div>
+
+        <div class="details">
+          <div class="detail">
+            <span>Humidity</span>
+            <span id="humidity"></span>
+          </div>
+          <div class="detail">
+            <span>Wind</span>
+            <span id="wind"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="weather.js"></script>
+  </body>
+</html>

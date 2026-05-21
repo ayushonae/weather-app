@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #72edf2, #5151e5);
+}
+
+.container {
+  width: 400px;
+  padding: 30px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+}
+
+input {
+  flex: 1;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus{
+    box-shadow: 0 0 15px rgba(50, 123, 241, 0.4);
+    outline: none;
+}
+
+button {
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #0072ff, #005bea);
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  background: linear-gradient(135deg, #1a7dff, #0066ff);
+}
+
+h1 {
+  color: white;
+
+  font-size: 42px;
+
+  font-weight: 600;
+
+  margin-bottom: 25px;
+}
+
+p,
+span {
+  color: white;
+
+  font-weight: 400;
+}
+
+.search-box {
+  margin-bottom: 30px;
+}
+
+.main-weather {
+  text-align: center;
+}
+
+#weather-icon {
+  font-size:50px;
+  margin-bottom: 10px;
+}
+
+#temperature {
+    font-size: 60px;
+    color: white;
+    font-weight:600;
+    margin-bottom: 5px;
+}
+
+.details {
+  margin-top: 25px;
+}
+
+.detail {
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  margin-bottom: 12px;
+}
+
+.weather-info{
+  display: none;
+}
+
+/* .dark-theme {
+  background: linear-gradient(135deg, #141e30, #243b55);
+} */
