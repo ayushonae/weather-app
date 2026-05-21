@@ -31,7 +31,7 @@ async function getWeather() {
 
   const longitude = geoData.results[0].longitude;
 
-  const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m`;
+  const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,is_day`;
 
   const weatherResponse = await fetch(weatherUrl);
 
@@ -47,12 +47,18 @@ async function getWeather() {
 
   const weatherCode = weatherData.current.weather_code;
 
+  const isDay = weatherData.current.is_day;
+
   let condition = "";
 
   if (weatherCode === 0) {
     condition = "Clear";
 
-    weatherIcon.innerText = "☀️";
+    if (isDay === 1) {
+      weatherIcon.innerText = "☀️";
+    } else {
+      weatherIcon.innerText = "🌙";
+    }
   } else if (weatherCode === 1 || weatherCode === 2) {
     condition = "Cloudy";
 
